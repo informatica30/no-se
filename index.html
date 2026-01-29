@@ -24,9 +24,27 @@
             </div>
             </div>
 
-            <div class="dropdown_menu">
-
+            <div class="dropdown_menu open">
+               <li><a href="hero"> Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li> <a href="#" class="action_btn"> Get Started</a></li>
             </div>
         </header>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropdown_menu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isOpen = dropdown_menu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-x-mark'
+            : 'fa-solid fa-bars'
+            }
+        </script>
     </body>
 </html>
